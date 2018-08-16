@@ -1,0 +1,33 @@
+---
+- name: Instalando pacotes basicos do sistema Linux.
+  hosts: all
+  tasks:
+    - name: 
+      yum: name={{ item }} update_cache=yes state=present
+      with_items:
+        - epel-release
+        - vim
+        - git
+        - wget
+        - curl
+        - ncdu
+        - yum-utils
+        - tcpdump
+        - nmap
+        - net-tools
+        - lsof
+        - traceroute
+        - telnet
+        - nmon
+        - bind-utils
+        - sshpass
+        - ftp
+        - tcpdump
+        - cifs-utils
+        - ntpdate
+        - git
+        - wget
+        - dos2unix
+        - unzip
+        - whois 
+  tags: pacotes basicos
