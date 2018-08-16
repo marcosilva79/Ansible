@@ -1,0 +1,4 @@
+---
+# tasks file for nginx
+- include: ../tasks/user.yml
+- include: ../tasks/packages.yml
