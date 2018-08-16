@@ -1,0 +1,21 @@
+---
+#Task para criacao dos usuarios administrativos Linux
+- name: Criacao do usuarios administrativos
+  hosts: all
+  remote_user: ansible
+  sudo: yes 
+  
+  vars:
+    - username1: fbastos
+    - username2: marco
+    - username3: fceregatti
+    - username4: infotec
+  tasks:
+    - name: Criando usuario nos servidores.
+      user: name={{ username1 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+      user: name={{ username2 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+      user: name={{ username3 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+      user: name={{ username4 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+  tags: usuarios_administrativos_linux
+
+# Senha padrao Kredilig2018!
