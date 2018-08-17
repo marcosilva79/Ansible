@@ -1,0 +1,27 @@
+---
+#Task para criacao dos usuarios administrativos Linux
+- name: Criacao dos usuarios
+  hosts: teste.kredilig.com.br
+  remote_user: ansible
+  sudo: yes
+
+  vars:
+    - username1: usuario1
+    - username2: usuario2
+    - username3: usuario3
+    - username4: usuario4
+
+  tasks:
+    - name: Criando usuario usuario1
+      user: name={{ username1 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+
+    - name: Criando usuario usuario2
+      user: name={{ username2 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+
+    - name: Criando usuario usuario3
+      user: name={{ username3 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+
+    - name: Criando usuario usuario4
+      user: name={{ username4 }} shell=/bin/bash createhome=yes state=present password=$1$a5vnWs9M$zsJI9Lf1JGOM7c2apHSqN1
+
+  tags: usuarios_linux
