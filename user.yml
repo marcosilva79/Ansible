@@ -1,7 +1,7 @@
 ---
 #Task para criacao dos usuarios administrativos Linux
 - name: Criacao dos usuarios
-  hosts: teste.kredilig.com.br
+  hosts: teste.com.br
   remote_user: ansible
   sudo: yes
 
